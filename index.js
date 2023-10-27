@@ -1,7 +1,7 @@
 const express = require('express')
 const {spawn} = require('child_process');
 const app = express()
-const PORT = 3001
+const PORT = 80
 
 app.use(express.json())
 
@@ -22,5 +22,5 @@ app.get('/', (req, res) => {
  });
  
 })
-app.listen(PORT, () => console.log(`Listnening on Port 
+app.listen(PORT, () => console.log(`🚀 Listening on Port 
 ${PORT}!`))
