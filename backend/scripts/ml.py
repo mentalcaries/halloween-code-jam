@@ -1,6 +1,7 @@
 from scipy.optimize import linear_sum_assignment
 from math import radians, sin, cos, sqrt, atan2
 import numpy as np
+import json
 
 # Sample list of cities with their coordinates (latitude, longitude)
 cities = {
@@ -53,10 +54,16 @@ row_ind, col_ind = linear_sum_assignment(distance_matrix)
 optimal_route = [list(cities.keys())[i] for i in col_ind]
 
 # Print the optimal route
-print("Optimal TSP Route:")
+# print("Optimal TSP Route: ")
+cities = []
 for city in optimal_route:
-    print(city)
+    cities.append(city)
+
 
 # Calculate the total distance of the optimal route
 total_distance = distance_matrix[row_ind, col_ind].sum()
-print("Total Distance:", total_distance)
+
+# print(json.dumps({'Total Distance': total_distance}))
+
+route = {'Optimal Route': cities, 'Total Distance': total_distance}
+print(json.dumps(route))
