@@ -9,7 +9,7 @@
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "deploy": "npm run build && scp -r -i '~/Downloads/tripleten-key.pem' ./dist/* ubuntu@jinglejamtest.twilightparadox.com:/home/ubuntu/frontend"
+    "deploy": "npm run build && scp -r -i ~/Downloads/tripleten-key.pem ./dist/* ubuntu@jinglejamtest.twilightparadox.com:/home/ubuntu/frontend"
   },
   "dependencies": {
     "react": "^18.2.0",
