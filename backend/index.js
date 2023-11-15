@@ -4,7 +4,9 @@ const cors = require('cors')
 const app = express();
 const PORT = 3001;
 
-app.use(cors())
+const corsOptions = ['https://localhost:3000', 'https://jinglejamtest.twilightparadox.com/' ]
+
+app.use(cors(corsOptions))
 app.use(express.json());
 
 app.get('/', (req, res) => {

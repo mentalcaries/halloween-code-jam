@@ -1,4 +1,4 @@
-const BASE_URL = 'https://api.jinglejamtest.twilightparadox.com';
+const BASE_URL = 'https://api.jinglejamtest.twilightparadox.com/';
 
 const checkServerResponse = (res) => {
   return res.ok ? res.json() : Promise.reject(`Error: ${res.status}`);
